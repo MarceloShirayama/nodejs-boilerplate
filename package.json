@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "start": "npm run build && node dist/src/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "type:check": "tsc --project tsconfig.json --pretty --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest --passWithNoTests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "module-alias": "^2.2.2",
+    "rimraf": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.1",
+    "@types/node": "^18.15.10",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.2",
+    "vitest": "^0.29.7"
+  }
+}
