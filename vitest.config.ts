@@ -4,6 +4,7 @@ import path from "path";
 
 export default defineConfig({
   test: {
+    setupFiles: ["dotenv/config"],
     globals: true,
     coverage: {
       provider: "istanbul",
