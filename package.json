@@ -9,7 +9,11 @@
     "dev": "nodemon src/index.ts",
     "type:check": "tsc --project tsconfig.json --pretty --noEmit",
     "test": "vitest run --passWithNoTests",
-    "test:watch": "vitest --passWithNoTests"
+    "test:unit": "vitest run --passWithNoTests --config vitest.config-unit.ts",
+    "test:unit:watch": "vitest --passWithNoTests --config vitest.config-unit.ts",
+    "test:integration": "vitest run --passWithNoTests --config vitest.config-integration.ts",
+    "test:integration:watch": "vitest --passWithNoTests --config vitest.config-integration.ts",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
