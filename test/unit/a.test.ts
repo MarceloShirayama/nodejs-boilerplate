@@ -1,9 +1,9 @@
-import { a } from "@/core/a";
+import { a } from '@/core/a';
 
-it("Should ", () => {
+it('Should ', () => {
   expect(a).toBe(1);
 });
 
-it("Should ", () => {
+it('Should ', () => {
   expect(a).not.toBe(2);
 });

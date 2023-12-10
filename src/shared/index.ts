@@ -1,1 +1,1 @@
-export * from "./improve-intellisense";
+export * from './improve-intellisense';
