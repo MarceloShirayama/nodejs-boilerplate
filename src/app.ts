@@ -1,40 +1,40 @@
-import { a } from './core/a';
-import { Spread } from '@/shared';
+import { Spread } from '@/shared'
+import { a } from './core/a'
 
-console.log(a, process.env['CUSTOM_ENV']);
+console.log(a, process.env.CUSTOM_ENV)
 
 type User = {
-  name: string;
-  age: number;
-};
+  name: string
+  age: number
+}
 
 type Repository = {
-  name: string;
-  url: string;
-};
+  name: string
+  url: string
+}
 
 type Github = {
-  id: number;
-  repos: Repository[];
-};
+  id: number
+  repos: Repository[]
+}
 
-type Arrow = 'Up' | 'Down' | 'Left' | 'Right';
+type Arrow = 'Up' | 'Down' | 'Left' | 'Right'
 
-type Button = 'X' | 'Y' | 'A' | 'B';
+type Button = 'X' | 'Y' | 'A' | 'B'
 
-type PushButton = Spread<Arrow | Button>;
+type PushButton = Spread<Arrow | Button>
 
-type UserRepository = Spread<User & Repository>;
+type UserRepository = Spread<User & Repository>
 
-type GithubUser = Spread<User & Github>;
+type GithubUser = Spread<User & Github>
 
 const userRepository: UserRepository = {
   name: 'Any Name',
   age: 10,
-  url: 'https://github.com/any_name/any_repository'
-};
+  url: 'https://github.com/any_name/any_repository',
+}
 
-console.log({ userRepository });
+console.log({ userRepository })
 
 const githubUser: GithubUser = {
   id: 1,
@@ -43,13 +43,17 @@ const githubUser: GithubUser = {
   repos: [
     {
       name: 'any_repository',
-      url: 'https://github.com/any_name/any_repository'
-    }
-  ]
-};
+      url: 'https://github.com/any_name/any_repository',
+    },
+  ],
+}
 
-console.log({ githubUser });
+console.log({ githubUser })
 
-const button: PushButton = 'Down';
+const button: PushButton = 'Down'
 
-console.log({ button });
+console.log({ button })
+
+const array = [1, 2, 3]
+
+console.log(array)
